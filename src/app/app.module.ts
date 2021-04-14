@@ -9,6 +9,10 @@ import { BookListComponent } from './book-list/book-list.component';
 import { SingleBookComponent } from './book-list/single-book/single-book.component';
 import { BookFormComponent } from './book-list/book-form/book-form.component';
 import { HeaderComponent } from './header/header.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { HeaderComponent } from './header/header.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, 
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
