@@ -32,7 +32,7 @@ export class BookListComponent implements OnInit {
   }
 
   onDeleteBook(book: Book) {
-    //this.booksService.removeBook(book);
+    this.booksService.removeBook(book);
   }
 
   onViewBook(id: number) {
