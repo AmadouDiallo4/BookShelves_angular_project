@@ -30,25 +30,28 @@ export class BookFormComponent implements OnInit {
     this.bookForm = this.formBuilder.group({
       title: ['', Validators.required],
       author: ['', Validators.required],
-      synopsis: ''
+      //synopsis: '',
+     //photo: ''
     });
   }
   
   onSaveBook() {
     const title = this.bookForm.get('title')?.value;
     const author = this.bookForm.get('author')?.value;
-    const synopsis = this.bookForm.get('synopsis')?.value;
+    //const synopsis = this.bookForm.get('synopsis')?.value;
+    //const photo = this.bookForm.get('photo')?.value;
     const newBook = new Book(title, author);
-    newBook.synopsis = synopsis;
+    //newBook.synopsis = synopsis;
+    //newBook.photo = photo;
     if(this.fileUrl && this.fileUrl !== ''){
-      newBook.photo = this.fileUrl;
-    }
+     newBook.photo = this.fileUrl;
+}
     
     this.booksService.createNewBook(newBook);
     this.router.navigate(['/books']);
   }
 
-  onUploadFile(file: File) {
+ onUploadFile(file: File) {
     this.fileIsUploading = true;
     this.booksService.uploadFile(file).then(
       (url: any) => {
