@@ -14,6 +14,7 @@ export class AppComponent {
       projectId: "bookshelves-eec51",
       storageBucket: "bookshelves-eec51.appspot.com",
       messagingSenderId: "931706964657",
+      databaseURL: 'https://bookshelves-eec51-default-rtdb.europe-west1.firebasedatabase.app',
       appId: "1:931706964657:web:8dc769be9e7a8e40e9f090"
     };
     // Initialize Firebase
