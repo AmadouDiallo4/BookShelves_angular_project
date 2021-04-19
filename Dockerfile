@@ -1,5 +1,5 @@
 #stage 
-FROM arm32v7/node:7 as node
+FROM arm32v7/node:latest as node
 WORKDIR /app
 COPY . .
 RUN npm install
